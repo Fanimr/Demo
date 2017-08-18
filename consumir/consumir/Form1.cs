@@ -42,7 +42,9 @@ namespace consumir
             datos.password = textBox4.Text;
             ServiceOwncloud.oc_users band = servicio.update(datos);
             if (band != null)
+            {
                 MessageBox.Show("Modificado correctamente");
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
