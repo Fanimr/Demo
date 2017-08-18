@@ -27,7 +27,9 @@ namespace consumir
             datos.password = textBox2.Text;
             ServiceOwncloud.oc_users band = servicio.create(datos);
             if (band != null )
+            {
                 MessageBox.Show("Agregado correctamente");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
