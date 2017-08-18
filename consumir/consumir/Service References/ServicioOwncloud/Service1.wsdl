@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="Service1" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://192.168.73.189/ServiceOwncloud/Service1.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://192.168.73.189/ServiceOwncloud/Service1.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://192.168.73.189/ServiceOwncloud/Service1.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Entities" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IService1_CreateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchUser_InputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUser" />
+  </wsdl:message>
+  <wsdl:message name="IService1_SearchUser_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SearchUserResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateShare_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShare" />
+  </wsdl:message>
+  <wsdl:message name="IService1_CreateShare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateShareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateShare_InputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShare" />
+  </wsdl:message>
+  <wsdl:message name="IService1_UpdateShare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UpdateShareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteShare_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShare" />
+  </wsdl:message>
+  <wsdl:message name="IService1_DeleteShare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteShareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListShare_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListShare" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListShare_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListShareResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListFileCache_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListFileCache" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListFileCache_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListFileCacheResponse" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListStorage_InputMessage">
+    <wsdl:part name="parameters" element="tns:ListStorage" />
+  </wsdl:message>
+  <wsdl:message name="IService1_ListStorage_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ListStorageResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IService1">
+    <wsdl:operation name="CreateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateUser" message="tns:IService1_CreateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateUserResponse" message="tns:IService1_CreateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateUser" message="tns:IService1_UpdateUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateUserResponse" message="tns:IService1_UpdateUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteUser" message="tns:IService1_DeleteUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteUserResponse" message="tns:IService1_DeleteUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListUser" message="tns:IService1_ListUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListUserResponse" message="tns:IService1_ListUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SearchUser">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/SearchUser" message="tns:IService1_SearchUser_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/SearchUserResponse" message="tns:IService1_SearchUser_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateShare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/CreateShare" message="tns:IService1_CreateShare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/CreateShareResponse" message="tns:IService1_CreateShare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/UpdateShare" message="tns:IService1_UpdateShare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/UpdateShareResponse" message="tns:IService1_UpdateShare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/DeleteShare" message="tns:IService1_DeleteShare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/DeleteShareResponse" message="tns:IService1_DeleteShare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListShare">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListShare" message="tns:IService1_ListShare_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListShareResponse" message="tns:IService1_ListShare_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListFileCache">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListFileCache" message="tns:IService1_ListFileCache_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListFileCacheResponse" message="tns:IService1_ListFileCache_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ListStorage">
+      <wsdl:input wsaw:Action="http://tempuri.org/IService1/ListStorage" message="tns:IService1_ListStorage_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IService1/ListStorageResponse" message="tns:IService1_ListStorage_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_IService1" type="tns:IService1">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="CreateUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SearchUser">
+      <soap:operation soapAction="http://tempuri.org/IService1/SearchUser" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateShare">
+      <soap:operation soapAction="http://tempuri.org/IService1/CreateShare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpdateShare">
+      <soap:operation soapAction="http://tempuri.org/IService1/UpdateShare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteShare">
+      <soap:operation soapAction="http://tempuri.org/IService1/DeleteShare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListShare">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListShare" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListFileCache">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListFileCache" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ListStorage">
+      <soap:operation soapAction="http://tempuri.org/IService1/ListStorage" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="Service1">
+    <wsdl:port name="BasicHttpBinding_IService1" binding="tns:BasicHttpBinding_IService1">
+      <soap:address location="http://192.168.73.189/ServiceOwncloud/Service1.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
