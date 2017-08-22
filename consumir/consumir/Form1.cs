@@ -38,7 +38,7 @@ namespace consumir
             ServiceOwncloud.oc_users datos = new ServiceOwncloud.oc_users();
 
             datos.uid = textBox3.Text;
-            datos.displayname = "";
+            datos.displayname = "    ";
             datos.password = textBox4.Text;
             ServiceOwncloud.oc_users band = servicio.update(datos);
             if (band != null)
